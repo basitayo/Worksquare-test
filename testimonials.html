@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Worksquare Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+
+    <header>
+        <div class="logo-branding">
+            <img src="images/logo.png" alt="Worksquare Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="#" class="active" style="color: var(--accent-red);">Enquiry</a>
+        </nav>
+        <div class="header-cta">
+            <button class="openModalBtn">Book Appointment</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Inner Page Hero Canvas Frame -->
+        <section class="hero-canvas" style="height: 50vh; min-height: 350px; background: linear-gradient(to right, rgba(20, 20, 20, 0.95) 40%, rgba(0,0,0,0.2)), url('images/photo_2026-06-28\ 15.24.14.jpeg') center/cover no-repeat;">
+            <div class="hero-content" style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+                <span class="section-tag">Driver Validation</span>
+                <h1 style="margin-top: 40px; font-size: 3.5rem;">Client Testimonials</h1>
+                <p>Real track and street feedback from high-performance drivers who demand absolute calibration accuracy.</p>
+            </div>
+        </section>
+
+        <!-- Expanded Reviews Canvas Grid Frame -->
+        <section class="reviews-canvas" style="background-color: var(--clean-white); padding: 100px 60px;">
+            <div class="reviews-grid">
+                <!-- Card 1 -->
+                <div class="review-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"Finding an honest tire center that understands track-day alignments is rare. Worksquare perfectly balanced my compound sets. The steering response is night and day."</p>
+                    <span class="reviewer-signature">— Marcus V., Performance Touring Client</span>
+                </div>
+                <!-- Card 2 -->
+                <div class="review-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"They diagnosed an intricate electronic suspension error that two premium dealerships completely missed. Transparent pricing, zero sales fluff. Highly recommend."</p>
+                    <span class="reviewer-signature">— Elena R., Executive Sedan Owner</span>
+                </div>
+                <!-- Card 3 -->
+                <div class="review-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"Flawless tire swaps. They use touchless mounting machines, so there wasn't a single scratch on my custom matte wheels. Absolute professionals."</p>
+                    <span class="reviewer-signature">— David K., Commercial Fleet Lead</span>
+                </div>
+                <!-- Card 4 -->
+                <div class="review-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"The telemetry reports they hand you after tuning are incredibly detailed. I knew exactly where every single dollar went. Absolute calibration mastery."</p>
+                    <span class="reviewer-signature">— Jordan T., Hot Hatch Enthusiast</span>
+                </div>
+                <!-- Card 5 -->
+                <div class="review-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"Outstanding response times on emergency drivetrain troubleshooting. They break problems down through an engineering lens without any gimmicks."</p>
+                    <span class="reviewer-signature">— Christian L., Fleet Logistics Director</span>
+                </div>
+                <!-- Card 6 -->
+                <div class="review-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"My track lap times directly improved after their laser alignment optimization. The precision suspension balancing holds flat through hard corners."</p>
+                    <span class="reviewer-signature">— Sarah M., Time Attack Competitor</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stylized Feedback Review Submission Form Block -->
+        <section class="work-showcase reveal-on-scroll" style="background-color: var(--soft-gray); padding: 100px 60px; border-top: 1px solid rgba(0,0,0,0.05);">
+            <div style="max-width: 650px; margin: 0 auto; background: var(--clean-white); padding: 50px; border-radius: 30px; box-shadow: 0 20px 50px rgba(26,28,36,0.05); border-top: 5px solid var(--primary-blue);">
+                
+                <div class="section-header centered" style="text-align: center; margin-bottom: 35px;">
+                    <span class="section-tag">Share Your Experience</span>
+                    <h2 style="font-size: 1.8rem; margin-bottom: 10px;">Submit Driver Feedback</h2>
+                    <p style="font-size: 0.85rem; color: #666; line-height: 1.5;">Your performance telemetry matter to us. Help other drivers find elite-level precision diagnostics.</p>
+                </div>
+
+                <form id="feedbackForm">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="e.g. Lewis H." required style="border-radius: 10px;">
+                        </div>
+                        <div class="input-group">
+                            <label>Driver Profile / Vehicle Model</label>
+                            <input type="text" placeholder="e.g. Sports Coupe Owner" required style="border-radius: 10px;">
+                        </div>
+                    </div>
+
+                    <div class="input-group" style="margin-top: 10px;">
+                        <label>Calibration Rating/ Enquiry</label>
+                        <select required style="border-radius: 10px; -webkit-appearance: none;">
+                            <option value="5">★★★★★ (5/5 Excellence Matrix)</option>
+                            <option value="4">★★★★☆ (4/5 Highly Satisfactory)</option>
+                            <option value="3">★★★☆☆ (3/5 Standard Care)</option>
+                            <option value="2">★★☆☆☆ (2/5 Needs Improvement)</option>
+                            <option value="1">★☆☆☆☆ (1/5 Poor Satisfaction)</option>
+                            <option value="6">Enquiry (Have A Question)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group" style="margin-top: 10px;">
+                        <label>Review Description</label>
+                        <textarea placeholder="Detail your mechanical diagnostic experience, alignment quality, or transparent pricing notes..." rows="5" required style="padding: 14px; border: 1px solid #e2e8f0; background: var(--soft-gray); outline: none; font-size: 0.9rem; color: var(--rich-charcoal); font-family: inherit; resize: none; border-radius: 10px;"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-booking" style="width: 100%; border-radius: 12px; font-size: 0.85rem; margin-top: 15px;">Transmit Feedback Log</button>
+                </form>
+
+                <!-- Success Confirmation Shim -->
+                <div id="feedbackSuccess" style="display: none; text-align: center; padding: 40px 0;">
+                    <div style="color: var(--primary-blue); font-size: 3rem; margin-bottom: 15px;">✓</div>
+                    <h3 style="color: var(--primary-blue); margin-bottom: 10px; font-weight: 800;">Review Telemetry Processed!</h3>
+                    <p style="font-size: 0.9rem; color: #555;">Thank you for contributing to the Worksquare Solutions database. Your review will populate after structural indexing.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-matrix">
+            <!-- Column 1: Logo & Communication Telemetry -->
+            <div class="footer-col branding-col">
+                <div class="logo-branding" style="margin-bottom: 20px;">
+                    <img src="images/logo.png" alt="Worksquare Logo" style="filter: brightness(0) invert(1);">
+                </div>
+                <p class="footer-desc">Laboratory-grade diagnostics and performance tire calibrations engineered for track and street frameworks.</p>
+                <div class="contact-telemetry">
+                    <a href="tel:+234 808 266 8066"><strong>P:</strong> +234 808 266 8066</a>
+                    <a href="mailto:info@worksquareng.com , enquiry@worksquareng.com"><strong>E:</strong> info@worksquareng.com , enquiry@worksquareng.com</a>
+                    <a href=""><strong>L:</strong> Worksquare Solution Limited 346, Borno way, Via Alagomeji Bustop, Ebute meta, Lagos.</a>
+                </div>
+            </div>
+
+            <!-- Column 2: Index Site Navigation -->
+            <div class="footer-col links-col">
+                <h3>Navigation</h3>
+                <ul class="footer-links-list">
+                    <li><a href="index.html">Home Performance</a></li>
+                    <li><a href="about.html">About The Science</a></li>
+                    <li><a href="services.html">Capability Array</a></li>
+                    <li><a href="testimonials.html">Driver Validation</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Social Media Broadcast Channels -->
+            <div class="footer-col socials-col">
+                <h3>Social Broadcasts</h3>
+                <p style="margin-bottom: 15px;">Follow our daily diagnostic telemetry and live track-side updates:</p>
+                <div class="social-channels-row">
+                    <a href="#" aria-label="Facebook Link">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram Link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="X Platform Link">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube Link">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Structural Copyright Strip -->
+        <div class="footer-bottom-strip">
+            <p>&copy; 2026 WORKSQUARE SOLUTIONS. ALL RIGHTS RESERVED.</p>
+            <p>DESIGNED BY SBACE</p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal Layer Components remain exact and functional below -->
+    <div id="appointmentModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Make an Appointment</h2>
+            <p>Secure your specific bay allocation window. Our service advisory team will confirm your telemetry check within 1 hour.</p>
+            
+            <form id="appointmentForm">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="input-group">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="123-456-7890" required>
+                </div>
+                <div class="input-group">
+                    <label>Primary Service Needed</label>
+                    <select required>
+                        <option value="" disabled selected>Select service array...</option>
+                        <option>Precision Wheel Alignment & Tires</option>
+                        <option>Advanced Powertrain Diagnostics</option>
+                        <option>Braking System Calibration</option>
+                        <option>Scheduled Factory Maintenance</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Preferred Date</label>
+                    <input type="date" required>
+                </div>
+                <button type="submit" class="submit-booking">Confirm Allocation Window</button>
+            </form>
+            
+            <div id="successMessage" style="display:none;">
+                <h3>Bay Reserved Successfully!</h3>
+                <p>Your calendar reservation code has been generated. See you in the bay.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

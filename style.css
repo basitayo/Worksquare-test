@@ -1,0 +1,1819 @@
+/* ==========================================================================
+   IDENTITY STRUCT RESETS & COLOR PROFILE VARIABLE MATRICES
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    --primary-blue: #2E3192;    /* Anchor Brand Tone */
+    --accent-red: #ED1B24;      /* Pure CTA Focus Driver */
+    --clean-white: #FFFFFF;     /* Base Structural Background Floor */
+    --rich-charcoal: #1a1c24;   /* High-Contrast Typographic Secondary */
+    --soft-gray: #f8f9fa;       /* Neutral Section Framing Break */
+}
+
+body {
+    background-color: var(--clean-white);
+    color: var(--rich-charcoal);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+/* ==========================================================================
+   NAVIGATION DESKTOP FOOTPRINT
+   ========================================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    /* height: 12vh; */
+    /* background-color: var(--clean-white); */
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    position: fixed;
+    top: 0;
+    z-index: 900;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+}
+
+.logo-branding h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--primary-blue);
+}
+
+.logo-branding h2 span {
+    color: var(--accent-red);
+    font-weight: 300;
+}
+
+.logo-branding img {
+    width: 100%;
+    max-width: 200px;
+    object-fit: contain;
+    margin-right: 12px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--clean-white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+/* Structural Hard CTA Buttons */
+header button, .cta-primary {
+    padding: 12px 28px;
+    background-color: var(--primary-blue);
+    border: 1px solid #f1f1f1;
+    color: var(--clean-white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    border-radius: 15px;
+}
+
+header button:hover, .cta-primary:hover {
+    background-color: var(--accent-red); /* High performance flip action */
+}
+
+/* ==========================================================================
+   HERO CANVAS SECTION
+   ========================================================================== */
+.hero-canvas {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(20, 20, 20, 0.95) 20%, rgba(0,0,0,0.4) 50%), 
+                url('images/photo_2026-06-28\ 15.24.32.jpeg') center/cover no-repeat;
+    display: flex;
+    /* align-items: center; */
+    /* padding: 0 60px; */
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0 0 30px 30px;
+}
+
+.hero-content {
+    max-width: 750px;
+    color: var(--clean-white);
+    padding: 0 60px;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    margin-top: 100px;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 35px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.heero-conntss2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.heero-conntss2 div{
+    display: flex;
+    flex-direction: column;
+}
+
+.heero-conntss2 h3{
+    font-size: 1.7rem;
+}
+
+.heero-conntss2 p{
+    margin-bottom: 0;
+}
+
+.herroor-sceece2 {
+    background-color: #2E3192;
+    color: white;
+    bottom: 0;
+    padding: 50px;
+    border-radius: 0 0 30px 30px;
+}
+
+.catoonsffs{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.box1 div{
+    width: 100%;
+    max-width: 290px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.box1 img{
+    width: 60px;
+}
+.box1 h4{
+    font-size: 1.2rem;
+}
+.box1 p{
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   WHO WE ARE SECTION STRIP
+   ========================================================================== */
+.info-strip {
+    padding: 100px 60px;
+    background-color: var(--clean-white);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.section-tag {
+    display: inline-block;
+    color: var(--accent-red);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.info-text h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.info-text p {
+    color: #555555;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.metric-row {
+    display: flex;
+    gap: 50px;
+}
+
+.metrics-container{
+    display: flex;
+    gap: 50px;
+}
+
+.stat-box h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    border-bottom: 3px solid var(--accent-red);
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #777777;
+}
+
+.info-visual img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    box-shadow: 25px 25px 0px var(--soft-gray);
+    border-radius: 30px;
+}
+
+/* ==========================================================================
+   LATEST WORK ASYMMETRIC GRID SHOWCASE
+   ========================================================================== */
+.work-showcase {
+    padding: 100px 60px;
+    background-color: var(--soft-gray);
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+}
+
+.section-header.centered {
+    text-align: center;
+}
+
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 30px;
+}
+
+.work-item {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary-blue);
+    border-radius: 30px;
+}
+
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.work-item.size-wide { grid-column: span 2; }
+.work-item.size-tall { grid-row: span 2; }
+
+/* Dynamic Intersect Fade Focus Overlays */
+.work-gallery:has(.work-item:hover) .work-item:not(:hover) {
+    opacity: 0.4;
+}
+
+.work-item:hover img {
+    transform: scale(1.05);
+}
+
+.work-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px;
+    background: linear-gradient(to top, rgba(26, 28, 36, 0.95) 0%, rgba(26, 28, 36, 0) 100%);
+    color: var(--clean-white);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.work-item:hover class, .work-item:hover .work-overlay {
+    opacity: 1;
+}
+
+.work-overlay h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.work-overlay p {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.75);
+}
+
+/* ==========================================================================
+   TESTIMONIALS SECTION
+   ========================================================================== */
+.reviews-canvas {
+    padding: 100px 60px;
+    background-color: var(--clean-white);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.review-card {
+    background: var(--soft-gray);
+    padding: 40px;
+    border-left: 4px solid var(--primary-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+
+.rating {
+    color: var(--accent-red);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.review-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444444;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.reviewer-signature {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-blue);
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   FOOTER FRAME STRIP
+   ========================================================================== */
+footer {
+    background-color: var(--rich-charcoal);
+    color: rgba(255,255,255,0.4);
+    padding: 40px 60px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+footer {
+    background-color: var(--rich-charcoal);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 80px 60px 40px 60px;
+    font-family: inherit;
+    border-top: 4px solid var(--primary-blue);
+}
+
+.footer-matrix {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+}
+
+.footer-col h3 {
+    color: var(--clean-white);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent-red);
+}
+
+.footer-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.contact-telemetry {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-telemetry a {
+    color: var(--clean-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.contact-telemetry a:hover {
+    color: var(--accent-red);
+}
+
+/* Footer Link Modules */
+.footer-links-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links-list a {
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links-list a:hover {
+    color: var(--clean-white);
+    transform: translateX(5px);
+}
+
+/* Social Broadcast Nodes */
+.social-channels-row {
+    display: flex;
+    gap: 12px;
+}
+
+.social-channels-row a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    color: var(--clean-white);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-channels-row a:hover {
+    background: var(--clean-white);
+    border-color: var(--primary-blue);
+    transform: translateY(-3px);
+}
+
+/* Base Footprint Strip */
+.footer-bottom-strip {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+
+/* ==========================================================================
+   APPOINTMENT MODAL LAYER (GLASSMORPHISM EXTENSION)
+   ========================================================================== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: rgba(26, 28, 36, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.active { display: flex; }
+
+.modal-content {
+    background: var(--clean-white);
+    padding: 50px;
+    width: 90%;
+    max-width: 480px;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+    border-top: 5px solid var(--primary-blue);
+    border-radius: 30px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #aaaaaa;
+    transition: color 0.2s;
+}
+
+.close-modal:hover { color: var(--rich-charcoal); }
+
+.modal-content h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+}
+
+.modal-content p {
+    font-size: 0.85rem;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    color: #575757;
+}
+
+.input-group input, .input-group select {
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    background: var(--soft-gray);
+    outline: none;
+    font-size: 0.9rem;
+    color: var(--rich-charcoal);
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: var(--primary-blue);
+    background: var(--clean-white);
+}
+
+.submit-booking {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--accent-red); /* Uses Red highlighting strictly for confirmation actions */
+    color: var(--clean-white);
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-booking:hover { background-color: var(--primary-blue); }
+
+#successMessage h3 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================================================
+   FONT AWESOME BRAND BRANDING OVERRIDES
+   ========================================================================== */
+.social-channels-row a {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* Formats the Font Awesome vector glyph layer size */
+.social-channels-row a i {
+    font-size: 16px !important;
+    color: var(--clean-white) !important;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Interactive brand accent color shift on hover */
+.social-channels-row a:hover i.fa-facebook-f { color: #1877F2 !important; transform: scale(1.15); }
+.social-channels-row a:hover i.fa-instagram  { color: #E1306C !important; transform: scale(1.15); }
+.social-channels-row a:hover i.fa-x-twitter  { color: #3c3c3c !important; transform: scale(1.15); }
+.social-channels-row a:hover i.fa-youtube    { color: #FF0000 !important; transform: scale(1.15); }
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   PREMIUM MOTION INTERACTION STYLES
+   ========================================================================== */
+
+/* The initial hidden state of elements before scrolling into view */
+.reveal-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), 
+                transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+    will-change: transform, opacity;
+}
+
+/* Stagger delay classes to make grids feel fluid */
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+
+/* The activated state triggered instantly by JavaScript */
+.reveal-element.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+/* ==========================================================================
+   PRODUCTION-GRADE SCROLL ENTRANCE REVEALS
+   ========================================================================== */
+
+/* The hidden base state of any animated element */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.85s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.85s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, opacity; /* Optimizes GPU hardware acceleration */
+}
+
+/* Unique variation: Sleek horizontal slide-in for side elements */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, opacity;
+}
+
+/* Activated target state triggered automatically via the JS engine */
+.reveal-on-scroll.active,
+.reveal-left.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Precise stagger delay modifiers for sequential items (grids, columns, lists) */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+
+
+
+/* Slogan and Tagline Typography Styling */
+.brand-tagline {
+    font-size: 1.2rem;
+    color: var(--accent-red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Clearer configuration for the phone telemetry numbers layout */
+.hero-contact-info h3 {
+    color: var(--clean-white);
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+}
+
+.hero-contact-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================\n   SERVICES MATRIX GRID LAYOUT & INTERACTIONS\n   ========================================================================== */
+
+.services-matrix-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 60px 10%;
+    background-color: var(--soft-gray);
+    width: 100%;
+
+}
+
+/* Individual Grid Card Elements */
+.service-card {
+    background-color: var(--clean-white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border-top: 4px solid var(--primary-blue);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+                border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+/* High-Contrast Brand Accent Hover-States */
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(46, 49, 146, 0.12);
+    border-top-color: var(--accent-red);
+}
+
+/* Icon Graphics Styling */
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 25px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    color: var(--accent-red);
+    transform: scale(1.08);
+}
+
+/* Card Typography Styling Matrices */
+.service-card h3 {
+    font-size: 1.4rem;
+    color: var(--rich-charcoal);
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+}
+
+.service-card p {
+    font-size: 0.98rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ==========================================================================\n   SCROLL REVEAL ANIMATION STATES (Requires script.js to trigger)\n   ========================================================================== */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+/* ==========================================================================\n   INFINITE VEHICLE LOGO TICKER TRACKS\n   ========================================================================== */
+
+.vehicles-serviced-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    overflow: hidden; /* Important: Prevents horizontal page break layout spills */
+    width: 100%;
+}
+
+.vehicles-serviced-section .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.vehicles-serviced-section h2 {
+    font-size: 2rem;
+    color: var(--rich-charcoal, #222);
+    margin-bottom: 10px;
+}
+
+/* Master Wrapper For Carousels */
+.carousel-matrix-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Distance between top row and bottom row */
+    width: 100%;
+    position: relative;
+}
+
+/* Base Ticker Environment Mask */
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 10px 0;
+}
+
+/* Soft Visual Edge Fade Blur Effects using CSS pseudo-elements */
+.ticker-wrap::before,
+.ticker-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+.ticker-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, #f9f9f9 10%, rgba(249, 249, 249, 0));
+}
+.ticker-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, #f9f9f9 10%, rgba(249, 249, 249, 0));
+}
+
+/* Infinite Flex Ribbon Track */
+.ticker-track {
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    gap: 40px; /* Space between each image box */
+}
+
+/* Logo Render Container Cards */
+.logo-item {
+    width: 160px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+}
+
+/* Subtle interact hover feature */
+.logo-item:hover {
+    transform: scale(1.05);
+}
+
+.logo-item img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+    opacity: 0.75;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logo-item:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* ==========================================================================\n   TICKER ANIMATION ENGINE TIMELINE SCHEDULING\n   ========================================================================== */
+
+/* Top Row: Moving Right */
+.direction-right .ticker-track {
+    animation: scrollRight 30s linear infinite;
+}
+
+/* Bottom Row: Moving Left */
+.direction-left .ticker-track {
+    animation: scrollLeft 30s linear infinite;
+}
+
+/* Pause animations when user hovers over a track row */
+.ticker-wrap:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+/* Animation Mechanics: Must offset exactly by 50% due to matching item duplicates */
+@keyframes scrollLeft {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translate3d(-50%, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Adaptive Overrides for Small Device Screen Footprints */
+@media (max-width: 768px) {
+    .services-matrix-container {
+        padding: 40px 20px;
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
+/* ==========================================================================\n   CORE TRUST METRICS & STATS SECTION\n   ========================================================================== */
+
+.trust-metrics-section {
+    background-color: var(--rich-charcoal, #1a1c24);
+    padding: 50px 10%;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    margin-top: -30px; /* Slight decorative overlap into the hero edge if needed */
+    border-bottom: 4px solid var(--accent-red);
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.metric-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* Icon Design Box */
+.metric-icon-wrap {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--clean-white);
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+
+.metric-card:hover .metric-icon-wrap {
+    background-color: var(--accent-red);
+}
+
+/* Typography Matrix */
+.metric-data h2 {
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--clean-white);
+    line-height: 1;
+}
+
+.metric-suffix {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-red);
+    margin-left: 2px;
+}
+
+.metric-data p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* ==========================================================================\n   SPLIT LAYOUT: STATS + SPECIALIZED SYSTEMS MATRIX\n   ========================================================================== */
+
+.trust-metrics-section {
+    background-color: var(--rich-charcoal, #1a1c24);
+    padding: 70px 8%;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    border-bottom: 4px solid var(--accent-red);
+}
+
+.metrics-split-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: start;
+    width: 100%;
+}
+
+/* Section Sub-labels & Titles */
+.section-badge {
+    color: var(--accent-red);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.split-section-title {
+    color: var(--clean-white);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+/* Left Grid Column */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.metric-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.metric-icon-wrap {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--clean-white);
+    flex-shrink: 0;
+}
+
+.metric-data h2 {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--clean-white);
+    line-height: 1;
+}
+
+.metric-suffix {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-red);
+    margin-left: 1px;
+}
+
+.metric-data p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+/* Right Capability Tag Grid Column */
+.capabilities-tag-cloud {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.capability-tag {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #e2e4eb;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.capability-tag i {
+    color: var(--primary-blue);
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover Accent Interactivity */
+.capability-tag:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: var(--accent-red);
+    transform: translateX(4px);
+    color: var(--clean-white);
+}
+
+.capability-tag:hover i {
+    color: var(--accent-red);
+}
+
+
+
+/* ==========================================================================\n   WHY CHOOSE US: SYSTEM ADVANTAGES & VALUES\n   ========================================================================== */
+
+.why-choose-us-section {
+    padding: 90px 8%;
+    background-color: var(--soft-gray, #f8f9fa);
+    width: 100%;
+}
+
+.why-choose-us-section .container-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-header-centered {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header-centered h2 {
+    font-size: 2.4rem;
+    color: var(--rich-charcoal, #1a1c24);
+    margin: 10px 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* 3-Column Values Dashboard Matrix */
+.value-propositions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+/* Individual Proposition Value Cards */
+.prop-card {
+    background-color: var(--clean-white, #ffffff);
+    padding: 35px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    border-left: 3px solid transparent;
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Interaction Hover Targets */
+.prop-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(46, 49, 146, 0.06);
+    border-left-color: var(--accent-red);
+}
+
+/* Icon Frame Adjustments */
+.prop-icon-indicator {
+    font-size: 1.6rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.prop-card:hover .prop-icon-indicator {
+    color: var(--accent-red);
+    transform: scale(1.1);
+}
+
+/* Proposition Card Content Typography */
+.prop-card h3 {
+    font-size: 1.25rem;
+    color: var(--rich-charcoal, #1a1c24);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.prop-card p {
+    font-size: 0.95rem;
+    color: #5b6070;
+    line-height: 1.6;
+}
+
+
+
+/* ==========================================================================\n   INTERACTIVE WORKSHOP MAP LOCATION MATRIX\n   ========================================================================== */
+
+.workshop-location-section {
+    width: 100%;
+    height: 550px; /* Precise layout height for map frame viewports */
+    position: relative;
+    background-color: var(--soft-gray);
+    overflow: hidden;
+}
+
+.location-split-map-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+/* Base Iframe Map Container Styles */
+.map-viewport-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.map-viewport-wrapper iframe {
+    filter: grayscale(10%) contrast(102%); /* Gives map a slightly sleeker, integrated look */
+}
+
+/* Custom Floating Brand Info Card Layout */
+.location-brand-overlay-card {
+    position: relative;
+    z-index: 3;
+    background-color: var(--clean-white, #ffffff);
+    width: 380px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border-top: 5px solid var(--primary-blue);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Logo Dimensions Frame */
+.card-logo-header {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 15px;
+}
+
+.map-card-logo {
+    max-height: 50px;
+    object-fit: contain;
+}
+
+/* Address & Coordinates Details Text Formatting */
+.card-address-body h3 {
+    font-size: 1.25rem;
+    color: var(--rich-charcoal, #1a1c24);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.address-detail-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.map-card-icon {
+    color: var(--accent-red);
+    font-size: 1.1rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.address-detail-line p {
+    font-size: 0.92rem;
+    color: #4b5060;
+    line-height: 1.5;
+}
+
+/* Interactive External Map Routing Link */
+.map-navigation-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--primary-blue);
+    color: var(--clean-white);
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.map-navigation-cta:hover {
+    background-color: var(--accent-red);
+    transform: translateY(-2px);
+}
+
+
+
+/* ==========================================================================\n   INTERACTIVE SERVICES ACCORDION MATRIX\n   ========================================================================== */
+
+.accordion-item {
+    background-color: #fcfdfe;
+    border: 1px solid #eef0f4;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.accordion-trigger {
+    width: 100%;
+    padding: 22px 30px;
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--rich-charcoal, #1a1c24);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-trigger span i {
+    color: var(--primary-blue);
+    margin-right: 12px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.accordion-trigger:hover {
+    background-color: #f5f7fa;
+    color: var(--primary-blue);
+}
+
+.chevron-icon {
+    font-size: 0.95rem;
+    color: #a0a5b5;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Panel Sliding Drawer Mechanics */
+.accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: #ffffff;
+}
+
+.spec-list {
+    list-style: none;
+    padding: 5px 30px 25px 30px;
+    margin: 0;
+}
+
+.spec-list li {
+    font-size: 0.95rem;
+    color: #4b5060;
+    padding: 10px 0;
+    border-bottom: 1px dashed #f0f2f6;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.spec-list li:last-child {
+    border-bottom: none;
+}
+
+.spec-list li i {
+    color: var(--accent-red);
+    font-size: 0.9rem;
+}
+
+/* Active State Drawer Overrides */
+.accordion-item.active {
+    border-color: rgba(46, 49, 146, 0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.accordion-item.active .accordion-trigger {
+    background-color: #f0f3f8;
+    color: var(--primary-blue);
+}
+
+.accordion-item.active .chevron-icon {
+    transform: rotate(180deg);
+    color: var(--primary-blue);
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS (MOBILE VIEWPORT ESCAPE)
+   ========================================================================== */
+@media (max-width: 992px) {
+    header {
+        padding: 30px; 
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links {
+        /* display: none;  */
+        padding: 10px;
+    } /* Drop heavy navigation rows on tablet grids */
+    .hero-canvas {
+        height: auto;
+        min-height: 100vh;
+    }
+    .hero-content{
+        padding: 140px 20px 40px 20px; /* Added top padding so content doesn't hide under your fixed header */
+    }
+    .hero-content h1 {
+        font-size: 2.5rem; 
+    }
+    .catoonsffs{
+        flex-direction: column;
+        gap: 30px; 
+    }
+
+    .heero-conntss2 h3{
+        font-size: 1.2rem;
+    }
+
+    .herroor-sceece2 p{
+        padding: 40px 20px;
+    }
+
+
+    /* ==========================================================================
+       MOBILE SHINING BORDER FOR THE SECTION BOX
+       ========================================================================== */
+    .herroor-sceece2 {
+        background-color: #2E3192;
+        color: white;
+        padding: 50px;
+        margin-top: 50px;
+        
+        /* 1. Define your original bottom corner border shape */
+        border-radius: 0 0 30px 30px;
+        
+        /* 2. Create a thick bottom border area */
+        border-bottom: 5px solid transparent;
+        
+        /* 3. Drop our chromium sweep gradient engine here */
+        background-image: 
+            linear-gradient(#2E3192, #2E3192), 
+            linear-gradient(120deg, #999 0%, #e6e6e6 25%, #fff 50%, #e6e6e6 75%, #999 100%);
+            
+        /* 4. Clip the gradient so it ONLY shows up inside the bottom border track */
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        background-size: 200% 100%;
+        
+        /* 5. Trigger the shimmer cycle movement */
+        animation: borderShine 3s infinite linear;
+    }
+
+    /* Shimmer Motion Telemetry Engine */
+    @keyframes borderShine {
+        0% {
+            background-position: 100% 0;
+        }
+        100% {
+            background-position: -100% 0;
+        }
+    }
+    
+    
+    .info-strip, .work-showcase, .reviews-canvas { padding: 70px 30px; }
+    .info-grid { grid-template-columns: 1fr; gap: 40px; }
+    .info-visual img { height: 300px; box-shadow: none; }
+    
+    .work-gallery { grid-template-columns: 1fr; grid-auto-rows: 250px; }
+    .work-item.size-wide { grid-column: auto; }
+    .work-item.size-tall { grid-row: auto; }
+    .work-overlay { opacity: 1; background: rgba(26,28,36,0.7); }
+    
+    .reviews-grid { grid-template-columns: 1fr; gap: 20px; }
+    .footer-content { flex-direction: column; gap: 15px; text-align: center; }
+}
+
+@media (max-width: 992px) {
+    /* Ensures the standalone About value block gains full width on small screens */
+    .herroor-sceece2 {
+        margin: 50px 0 0 0 !important;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Resets the bento matrix configurations to perfectly layered standard columns on smartphones */
+    .work-gallery{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .work-item {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .work-item div {
+        grid-template-columns: 1fr !important;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: auto !important;
+        gap: 30px !important;
+    }
+
+}
+
+@media (max-width: 992px) {
+    
+    /* Force-kill the desktop padding strictly for the mobile viewport */
+    .work-showcase {
+        padding: 40px 0px !important; /* 0px left/right pushes cards completely flush to the screen edge */
+    }
+
+    /* Keep the gallery grid tight against the new layout bounds */
+    .work-gallery {
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: auto !important;
+        gap: 20px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Prevent any inline styling on the items from re-introducing space */
+    .work-item {
+        margin: 0 !important;
+        border-radius: 30px !important; /* Optional: Making them flush looks cleaner with 0px padding */
+    }
+
+}
+
+@media (max-width: 992px) {
+    /* Expand the background image container height on mobile */
+    .hero-canvas {
+        height: auto !important;
+        min-height: 85vh !important; /* Forces the image section to be much longer */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    /* Apply safe top padding to accommodate the fixed header layout footprint */
+    .hero-canvas .hero-content {
+        padding-top: 220px !important; /* Clears the fixed header button safely */
+        padding-bottom: 60px !important; /* Keeps the text cleanly inside the section bounds */
+    }
+
+
+    /* Unstacks the side-by-side input grid on mobile viewports for easier typing */
+    #feedbackForm div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+}
+
+
+
+
+/* Responsive Adaptive Layout Overrides */
+@media (max-width: 992px) {
+    footer {
+        padding: 60px 20px 30px 20px !important;
+    }
+    .footer-matrix {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+        text-align: center;
+    }
+    .footer-col h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-links-list a:hover {
+        transform: none;
+    }
+    .social-channels-row {
+        justify-content: center;
+    }
+    .footer-bottom-strip {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center;
+    }
+
+    
+
+    .box1 div p{
+        width: 250px;
+        padding: 8px 10px;
+    }
+}
+
+
+
+
+/* Mobile Adjustments */
+@media (max-width: 576px) {
+    .trust-metrics-section {
+        padding: 40px 20px;
+        margin-top: 0;
+    }
+    .metric-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 15px;
+    }
+}
+
+
+
+/* Mobile Layout Overrides */
+@media (max-width: 768px) {
+    .why-choose-us-section {
+        padding: 60px 20px;
+    }
+    .section-header-centered h2 {
+        font-size: 1.9rem;
+    }
+    .value-propositions-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .prop-card {
+        padding: 30px 20px;
+    }
+}
+
+
+
+
+
+
+/* Responsive Structural Refinement */
+@media (max-width: 992px) {
+    .metrics-split-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .trust-metrics-section {
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    .capabilities-tag-cloud {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Adaptive Overrides for Mobile Viewports */
+@media (max-width: 768px) {
+    .workshop-location-section {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .location-split-map-container {
+        padding: 0;
+        flex-direction: column;
+    }
+    
+    .map-viewport-wrapper {
+        position: relative;
+        height: 350px; /* Locks an interactive frame on mobile view top */
+    }
+    
+    .location-brand-overlay-card {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 30px 20px;
+        border-top: none;
+        border-bottom: 5px solid var(--primary-blue);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .detailed-specs-section {
+        padding: 60px 20px !important;
+    }
+    .accordion-trigger {
+        padding: 18px 20px;
+        font-size: 1.05rem;
+    }
+    .spec-list {
+        padding: 5px 20px 20px 20px;
+    }
+}
