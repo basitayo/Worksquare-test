@@ -111,8 +111,8 @@ header button:hover, .cta-primary:hover {
    HERO CANVAS SECTION
    ========================================================================== */
 .hero-canvas {
-    height: 100vh;
-    background: linear-gradient(to right, rgba(20, 20, 20, 0.95) 20%, rgba(0,0,0,0.4) 50%), 
+    height: 125vh;
+    background: linear-gradient(to right, rgba(40, 40, 40, 0.95) 20%, rgba(0,0,0,0.0) 50%), 
                 url('images/photo_2026-06-28\ 15.24.32.jpeg') center/cover no-repeat;
     display: flex;
     /* align-items: center; */
@@ -123,9 +123,13 @@ header button:hover, .cta-primary:hover {
 }
 
 .hero-content {
-    max-width: 750px;
+    max-width: 1024px;
     color: var(--clean-white);
     padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
 }
 
 .hero-content h1 {
@@ -171,6 +175,12 @@ header button:hover, .cta-primary:hover {
     bottom: 0;
     padding: 50px;
     border-radius: 0 0 30px 30px;
+}
+
+.hero-contents-2{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .catoonsffs{
@@ -772,7 +782,10 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.95rem;
     letter-spacing: 1px;
+    margin-bottom: 0;
 }
+
+
 
 /* ==========================================================================\n   SERVICES MATRIX GRID LAYOUT & INTERACTIONS\n   ========================================================================== */
 
@@ -1565,7 +1578,7 @@ footer {
         /* 3. Drop our chromium sweep gradient engine here */
         background-image: 
             linear-gradient(#2E3192, #2E3192), 
-            linear-gradient(120deg, #999 0%, #e6e6e6 25%, #fff 50%, #e6e6e6 75%, #999 100%);
+            linear-gradient(120deg, #999 0%, #e6e6e6 25%, #3419ff 50%, #e6e6e6 75%, #ff0e0e 100%);
             
         /* 4. Clip the gradient so it ONLY shows up inside the bottom border track */
         background-origin: border-box;
@@ -1665,8 +1678,9 @@ footer {
 
     /* Apply safe top padding to accommodate the fixed header layout footprint */
     .hero-canvas .hero-content {
-        padding-top: 220px !important; /* Clears the fixed header button safely */
+        padding-top: 120px !important; /* Clears the fixed header button safely */
         padding-bottom: 60px !important; /* Keeps the text cleanly inside the section bounds */
+        height: 100vh;
     }
 
 
